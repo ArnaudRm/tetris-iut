@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tetris.arnaud.tetris.MainActivity"
+    android:layout_weight="0.5"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_height="350dp"
+        android:paddingTop="64dp"
+        android:layout_weight="0.99">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:id="@+id/left"
+            android:layout_width="58dp">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/left"
+                android:id="@+id/imageView3"
+                android:translationY="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="0.95"
+            android:layout_width="wrap_content">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                android:adjustViewBounds="true"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="2dp"
+                android:horizontalSpacing="2dp"
+                android:numColumns="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent"
+            android:id="@+id/right"
+            android:layout_width="60dp">
+
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/right"
+                android:id="@+id/imageView4"
+                android:translationY="200dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:id="@+id/bottom">
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.91" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/down"
+            android:id="@+id/down" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="77dp"
+            android:layout_height="67dp"
+            android:background="@drawable/start"
+            android:id="@+id/start" />
+
+    </LinearLayout>
+
+</LinearLayout>
